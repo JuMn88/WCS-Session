@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_SESSION['loginname'])) {
+    $name = $_SESSION['loginname'];
+} else {
+    $name = 'Wilder';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +58,6 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid text-right">
-        <strong>Hello Wilder !</strong>
+        <strong>Hello <?= $name ?> !</strong>
     </div>
 </header>
